@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <title>Seal Scrape Uni</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script>
+        function updateDiv() {
+            //$('#iframe').attr('src', function (i, val) { return val; });
+        }
+
+        $(document).ready(function () {
+            console.log("ready!");
+            setInterval(updateDiv, 3000);
+        });
+    </script>
+</head>
+
+<body>
+    <div id="root">
+        <iframe id="iframe" src="unis.html" height="1200px" width="100%">
+            Your Browser doesn't support Frames.
+        </iframe>
+    </div>
+</body>
+
+</html>
