@@ -52,11 +52,23 @@ async function getUniSeal(value) {
     console.log(x)
 }
 
-function main() {
-    var arr = ['Arizona State University', 'Baylor University', 'University of Washington', 'University of Waterloo', 'University of Wisconsin-Madison', 'Vanderbilt University', 'Villanova University', 'Washington University in St. Louis', 'Wayne State University', 'Western University', 'William Marsh Rice University', 'Yale University', 'York University']
+async function getUniSeal(value,i) {
+    setTimeout(
+        async function() {
+            var x = await getWikiImg(initialString(value))
+            console.log(x)
+        }
+        .bind(this),
+        2000*i
+    );
+}
 
-    for (var i = 0; i < arr.length; i++) {
-        getUniSeal(arr[i])
+function main() {
+    getUniSeal('Utah State University')
+
+    var arr = ['Arizona State University', 'Baylor University', 'University of Washington', 'University of Waterloo', 'University of Wisconsin-Madison', 'Vanderbilt University', 'Villanova University', 'Washington University in St. Louis', 'Wayne State University', 'Western University', 'William Marsh Rice University', 'Yale University', 'York University']
+    for (var i = 0; i < 5; i++) {
+        getUniSeal(arr[i],i)
     }
 }
 
